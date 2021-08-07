@@ -307,12 +307,12 @@ export default {
 @import "../assets/vars.scss";
 
 .url {
-    color: $primary;
+    color: var(--primary-color);
     margin-bottom: 20px;
     font-weight: bold;
 
     a {
-        color: $primary;
+        color: var(--primary-color);
     }
 }
 

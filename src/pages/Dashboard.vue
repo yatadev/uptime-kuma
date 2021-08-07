@@ -119,11 +119,11 @@ export default {
         }
 
         &:hover {
-            background-color: $highlight-white;
+            background-color: var(--highlight-white);
         }
 
         &.active {
-            background-color: #cdf8f4;
+            background-color: var(--connection-highlight);
         }
     }
 }

@@ -22,12 +22,12 @@
 }
 
 .btn-primary {
-    color: white;
+    color: var(--btn-text);
 
     &:hover, &:active, &:focus, &.active {
-        color: white;
-        background-color: $highlight;
-        border-color: $highlight;
+        color: var(--btn-hover);
+        background-color: var(--highlight-color);
+        border-color: var(--highlight-color);
     }
 }
 

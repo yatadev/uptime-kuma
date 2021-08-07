@@ -1,8 +1,61 @@
-$primary: #5CDD8B;
-$danger: #DC3545;
-$warning: #f8a306;
-$link-color: #111;
+//$primary: #5CDD8B;
+//$danger: #DC3545;
+//$warning: #f8a306;
+//$link-color: #111;
 $border-radius: 50rem;
 
-$highlight: #7ce8a4;
-$highlight-white: #e7faec;
+//$highlight: #7ce8a4;
+//$highlight-white: #e7faec;
+
+// you can access this colors with var(--primary-color)
+:root {
+    --primary-color: #5CDD8B;
+    --secondary-color: #c1c1c1;
+    --warning-color: #f8a306;
+    --danger-color: #DC3545;
+    --link-color: #111;
+    --highlight-color: #7ce8a4;
+    --highlight-white: #e7faec;
+    --font-color: #424242; // not used
+    --background-color: #fff;
+    --heading-color: #292922; // not used
+    --footer-color: #AAA;
+
+    // buttons
+    --btn-text: white;
+    --btn-hover: white;
+
+    --beat-empty-background: aliceblue;
+
+    --connection-lost: crimson;
+    --connection-lost-text: white;
+
+    --connection-highlight: #cdf8f4;
+}
+
+
+[data-theme="dark"] {
+    --primary-color: #9A97F3;
+    --secondary-color: #536390;
+    --warning-color: #f8a306;
+    --danger-color: #DC3545;
+    --link-color: #111;
+    --highlight-color: #7ce8a4;
+    --highlight-white: #e7faec;
+    --font-color: #e1e1ff; // not used
+    --background-color: #161625;
+    --heading-color: #818cab; // not used
+    --footer-color: #AAA;
+
+    // buttons
+    --btn-text: white;
+    --btn-hover: white;
+
+    --beat-empty-background: aliceblue;
+
+    --connection-lost: crimson;
+    --connection-lost-text: white;
+
+    --connection-highlight: #cdf8f4;
+}
+

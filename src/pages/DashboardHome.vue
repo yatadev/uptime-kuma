@@ -174,7 +174,7 @@ export default {
 
 .num {
     font-size: 30px;
-    color: $primary;
+    color: var(--primary-color);
     font-weight: bold;
     display: block;
 }

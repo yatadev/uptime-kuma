@@ -145,19 +145,19 @@ export default {
 .hp-bar-big {
     .beat {
         display: inline-block;
-        background-color: $primary;
+        background-color: var(--primary-color);
         border-radius: 50rem;
 
         &.empty {
-            background-color: aliceblue;
+            background-color: var(--beat-empty-background);
         }
 
         &.down {
-            background-color: $danger;
+            background-color: var(--danger-color);
         }
 
         &.pending {
-            background-color: $warning;
+            background-color: var(--warning-color);
         }
 
         &:not(.empty):hover {

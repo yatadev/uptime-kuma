@@ -113,7 +113,7 @@ export default {
     height: 60px;
     width: 100%;
     left: 0;
-    background-color: #fff;
+    background-color: var(--background-color);
     box-shadow: 0 15px 47px 0 rgba(0, 0, 0, 0.05), 0 5px 14px 0 rgba(0, 0, 0, 0.05);
     text-align: center;
     white-space: nowrap;
@@ -126,12 +126,12 @@ export default {
         height: 100%;
         padding: 8px 10px 0;
         font-size: 13px;
-        color: #c1c1c1;
+        color: var(--secondary-color);
         overflow: hidden;
         text-decoration: none;
 
         &.router-link-exact-active {
-            color: $primary;
+            color: var(--primary-color);
             font-weight: bold;
         }
 
@@ -151,12 +151,12 @@ export default {
 
 .lost-connection {
     padding: 5px;
-    background-color: crimson;
-    color: white;
+    background-color: var(--connection-lost);
+    color: var(--connection-lost-text);
 }
 
 footer {
-    color: #AAA;
+    color: var(--footer-color);
     font-size: 13px;
     margin-top: 10px;
     margin-bottom: 30px;
