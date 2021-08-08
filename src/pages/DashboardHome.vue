@@ -38,7 +38,7 @@
         </div>
 
         <div class="shadow-box" style="margin-top: 25px;">
-            <table class="table table-borderless">
+            <table class="table table-borderless table-hover">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -191,12 +191,11 @@ table {
     tr {
         transition: all ease-in-out 0.2ms;
     }
-    tbody {
-        &:hover {
-            background-color: var(--highlight-secondary);
-            color: var(--font-color);
-        }
-    }
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: var(--highlight-secondary);
+    color: var(--font-color);
 }
 
 </style>
