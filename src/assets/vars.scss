@@ -39,13 +39,13 @@ $border-radius: 50rem;
 }
 
 [data-theme="dark"] {
-    --primary-color: #9A97F3;
+    --primary-color: #3c8c59;
     --secondary-color: #536390;
     --warning-color: #f8a306;
-    --danger-color: #DC3545;
+    --danger-color: #af2331;
     --link-color: #111;
-    --font-color: #e1e1ff; // not used
-    --primary-background-color: #161625;
+    --font-color: #e1e1ff;
+    --primary-background-color: #161e26;
     --heading-color: #818cab; // not used
     --footer-color: #AAA;
     --beat-empty-background: aliceblue;
@@ -58,7 +58,7 @@ $border-radius: 50rem;
 
     // highlighting
     --highlight-color: #7ce8a4;
-    --highlight-white: #e7faec;
+    --highlight-white: #e7faec; // stupidly named atm
     --connection-highlight: #cdf8f4;
 
     // buttons
