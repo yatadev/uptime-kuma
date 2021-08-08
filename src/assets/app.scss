@@ -50,6 +50,17 @@
 .modal-content {
     border-radius: 1rem;
     backdrop-filter: blur(3px);
+    background-color: var(--primary-background-color);
+}
+
+.form-control {
+    background-color: var(--primary-background-color);
+    color: var(--font-color)
+}
+
+.form-select {
+    background-color: var(--primary-background-color);
+    color: var(--font-color)
 }
 
 // classes for the status monitor color switch
