@@ -51,7 +51,7 @@
     <!-- Mobile Only -->
     <div v-if="$root.isMobile" style="width: 100%;height: 60px;" />
     <nav v-if="$root.isMobile" class="bottom-nav">
-        <router-link to="/dashboard" class="nav-link" @click="$root.cancelActiveList">
+        <router-link to="/dashboard" :class="{ 'fixMobileNav' : $root.showListMobile }" @click="$root.cancelActiveList">
             <div><font-awesome-icon icon="tachometer-alt" /></div>
             Dashboard
         </router-link>
@@ -61,12 +61,12 @@
             List
         </a>
 
-        <router-link to="/add" class="nav-link" @click="$root.cancelActiveList">
+        <router-link to="/add" :class="{ 'fixMobileNav' : $root.showListMobile } " @click="$root.cancelActiveList">
             <div><font-awesome-icon icon="plus" /></div>
             Add
         </router-link>
 
-        <router-link to="/settings" class="nav-link" @click="$root.cancelActiveList">
+        <router-link to="/settings" :class="{ 'fixMobileNav' : $root.showListMobile } " @click="$root.cancelActiveList">
             <div><font-awesome-icon icon="cog" /></div>
             Settings
         </router-link>
@@ -150,6 +150,11 @@ export default {
     }
 }
 
+.fixMobileNav {
+    color: var(--secondary-color) !important;
+    background-color: var(--primary-background-color) !important;
+}
+
 .title {
     font-weight: bold;
 }
@@ -162,7 +167,7 @@ export default {
     color: var(--btn-text-only);
 }
 
-.nav-link.active{
+.nav-link.active {
     background-color: var(--btn-primary);
     color: var(--btn-text);
 }
