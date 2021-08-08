@@ -159,11 +159,12 @@ export default {
 }
 
 .nav-link {
-    color: var(--btn-text)
+    color: var(--btn-text-only);
 }
 
 .nav-link.active{
     background-color: var(--btn-primary);
+    color: var(--btn-text);
 }
 
 .lost-connection {

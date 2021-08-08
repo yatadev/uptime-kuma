@@ -38,6 +38,7 @@ $secondary: #c1c1c1;
     --btn-primary: var(--primary-color);
     --btn-danger: var(--danger-color);
     --btn-active: var(--highlight-color);
+    --btn-text-only: #111;
 }
 
 [data-theme="dark"] {
@@ -73,5 +74,6 @@ $secondary: #c1c1c1;
     --btn-primary: var(--primary-color);
     --btn-danger: var(--danger-color);
     --btn-active: var(--highlight-color);
+    --btn-text-only: #fff;
 }
 
