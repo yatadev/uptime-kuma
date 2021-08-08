@@ -121,7 +121,7 @@ export default {
         }
 
         &:hover {
-            background-color: var(--highlight-white);
+            background-color: var(--highlight-secondary);
         }
 
         &.active {

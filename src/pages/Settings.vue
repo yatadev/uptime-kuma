@@ -67,7 +67,7 @@
 
                     <h2>Theme</h2>
                     <div class="mb-3">
-                        <button class="btn btn-outline-primary me-1" @click="switchTheme">Switch Theme</button>
+                        <button class="btn btn-primary me-1" @click="switchTheme">Switch Theme</button>
                     </div>
                 </template>
             </div>

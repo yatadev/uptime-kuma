@@ -38,7 +38,7 @@
         </div>
 
         <div class="shadow-box" style="margin-top: 25px;">
-            <table class="table table-borderless table-hover">
+            <table class="table table-borderless">
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -185,9 +185,18 @@ export default {
 
 table {
     font-size: 14px;
+    color: var(--font-color);
+    background-color: var(--primary-background-color);
 
     tr {
         transition: all ease-in-out 0.2ms;
     }
+    tbody {
+        &:hover {
+            background-color: var(--highlight-secondary);
+            color: var(--font-color);
+        }
+    }
 }
+
 </style>

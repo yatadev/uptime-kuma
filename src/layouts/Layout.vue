@@ -7,7 +7,7 @@
 
     <!-- Desktop header -->
     <header v-if="! $root.isMobile" class="d-flex flex-wrap justify-content-center py-3 mb-3 border-bottom primary-background">
-        <router-link to="/dashboard" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <router-link to="/dashboard" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-title text-decoration-none">
             <object class="bi me-2 ms-4" width="40" height="40" data="/icon.svg" alt="Logo" />
             <span class="fs-4 title">Uptime Kuma</span>
         </router-link>
@@ -159,12 +159,11 @@ export default {
 }
 
 .nav-link {
-    background-color: var(--btn-primary);
     color: var(--btn-text)
 }
 
 .nav-link.active{
-    background-color: var(--btn-active);
+    background-color: var(--btn-primary);
 }
 
 .lost-connection {
@@ -175,6 +174,10 @@ export default {
 
 .primary-background {
     background-color: var(--primary-background-color);
+}
+
+.text-title {
+    color: var(--heading-color)
 }
 
 footer {
