@@ -64,6 +64,11 @@
                         <button v-if="! settings.disableAuth" class="btn btn-primary me-1" @click="confirmDisableAuth">Disable Auth</button>
                         <button v-if="! settings.disableAuth" class="btn btn-danger me-1" @click="$root.logout">Logout</button>
                     </div>
+
+                    <h2>Theme</h2>
+                    <div class="mb-3">
+                        <button class="btn btn-outline-primary me-1" @click="switchTheme">Switch Theme</button>
+                    </div>
                 </template>
             </div>
 
@@ -196,7 +201,16 @@ export default {
             this.saveSettings();
             this.$root.storage().removeItem("token");
         },
-
+        switchTheme() {
+            if (localStorage.getItem('theme') == "dark") {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                this.settings.theme = "light"
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        },
     },
 }
 </script>

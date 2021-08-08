@@ -1,11 +1,8 @@
-//$primary: #5CDD8B;
-//$danger: #DC3545;
-//$warning: #f8a306;
-//$link-color: #111;
 $border-radius: 50rem;
 
-//$highlight: #7ce8a4;
-//$highlight-white: #e7faec;
+// these are used sometimes if nothing is defined
+//$primary: #5CDD8B;
+//$secondary: #c1c1c1;
 
 // you can access this colors with var(--primary-color)
 :root {
@@ -14,25 +11,32 @@ $border-radius: 50rem;
     --warning-color: #f8a306;
     --danger-color: #DC3545;
     --link-color: #111;
-    --highlight-color: #7ce8a4;
-    --highlight-white: #e7faec;
     --font-color: #424242; // not used
-    --background-color: #fff;
+    --primary-background-color: #fff;
     --heading-color: #292922; // not used
     --footer-color: #AAA;
-
-    // buttons
-    --btn-text: white;
-    --btn-hover: white;
-
     --beat-empty-background: aliceblue;
-
     --connection-lost: crimson;
     --connection-lost-text: white;
 
-    --connection-highlight: #cdf8f4;
-}
+    // status colors
+    --up-color: var(--primary-color);
+    --down-color: var(--danger-color);
 
+    // highlighting
+    --highlight-color: #7ce8a4;
+    --highlight-white: #e7faec;
+    --connection-highlight: #cdf8f4;
+
+    // buttons
+    --btn-text: white;
+    --btn-text-outlined: var(--primary-color);
+    --btn-hover: white;
+    --btn-border: var(--primary-color);
+    --btn-primary: var(--primary-color);
+    --btn-danger: var(--danger-color);
+    --btn-active: var(--highlight-color);
+}
 
 [data-theme="dark"] {
     --primary-color: #9A97F3;
@@ -40,22 +44,30 @@ $border-radius: 50rem;
     --warning-color: #f8a306;
     --danger-color: #DC3545;
     --link-color: #111;
-    --highlight-color: #7ce8a4;
-    --highlight-white: #e7faec;
     --font-color: #e1e1ff; // not used
-    --background-color: #161625;
+    --primary-background-color: #161625;
     --heading-color: #818cab; // not used
     --footer-color: #AAA;
-
-    // buttons
-    --btn-text: white;
-    --btn-hover: white;
-
     --beat-empty-background: aliceblue;
-
     --connection-lost: crimson;
     --connection-lost-text: white;
 
+    // status colors
+    --up-color: var(--primary-color);
+    --down-color: var(--danger-color);
+
+    // highlighting
+    --highlight-color: #7ce8a4;
+    --highlight-white: #e7faec;
     --connection-highlight: #cdf8f4;
+
+    // buttons
+    --btn-text: white;
+    --btn-text-outlined: var(--primary-color);
+    --btn-hover: white;
+    --btn-border: var(--primary-color);
+    --btn-primary: var(--primary-color);
+    --btn-danger: var(--danger-color);
+    --btn-active: var(--highlight-color);
 }
 

@@ -32,7 +32,7 @@
                 <span class="word">Check every {{ monitor.interval }} seconds.</span>
             </div>
             <div class="col-md-4 text-center">
-                <span class="badge rounded-pill" :class=" 'bg-' + status.color " style="font-size: 30px">{{ status.text }}</span>
+                <span :class="className" style="font-size: 30px">{{ status.text }}</span>
             </div>
         </div>
     </div>
@@ -257,6 +257,25 @@ export default {
             const startIndex = this.perPage * (this.page - 1);
             const endIndex = startIndex + this.perPage;
             return this.heartBeatList.slice(startIndex, endIndex);
+        },
+
+        className() {
+            let colorClass = ""
+            switch (this.status.color) {
+                case "primary":
+                    colorClass = "isUp"
+                    break;
+                case "danger":
+                    colorClass = "isDown"
+                    break;
+                case "warning":
+                    colorClass = "isWarning"
+                    break;
+                default:
+                    colorClass = "isWarning"
+                    break;
+            }
+            return `badge rounded-pill ${colorClass}`;
         },
     },
     mounted() {

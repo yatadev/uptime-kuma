@@ -93,7 +93,8 @@ export default {
 @import "../assets/vars.scss";
 
 .container-fluid {
-    width: 98%
+    width: 98%;
+    background: var(--primary-background-color);
 }
 
 .list {
@@ -116,6 +117,7 @@ export default {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            color: var(--font-color);
         }
 
         &:hover {

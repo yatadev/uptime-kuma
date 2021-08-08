@@ -23,6 +23,19 @@
 
 .btn-primary {
     color: var(--btn-text);
+    background-color: var(--btn-primary);
+    border-color: var(--btn-border);
+
+    &:hover, &:active, &:focus, &.active {
+        color: var(--btn-hover);
+        background-color: var(--highlight-color);
+        border-color: var(--highlight-color);
+    }
+}
+
+.btn-outline-primary {
+    color: var(--btn-text-outlined);
+    border-color: var(--btn-primary);
 
     &:hover, &:active, &:focus, &.active {
         color: var(--btn-hover);
@@ -34,5 +47,22 @@
 .modal-content {
     border-radius: 1rem;
     backdrop-filter: blur(3px);
+}
+
+// classes for the status monitor color switch
+.isUp {
+    background-color: var(--up-color);
+}
+
+.isDown {
+    background-color: var(--down-color);
+}
+
+.isWarning {
+    background-color: var(--warning-color);
+}
+
+.isSecondary {
+    background-color: var(--secondary-color);
 }
 

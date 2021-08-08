@@ -6,7 +6,7 @@
     </div>
 
     <!-- Desktop header -->
-    <header v-if="! $root.isMobile" class="d-flex flex-wrap justify-content-center py-3 mb-3 border-bottom">
+    <header v-if="! $root.isMobile" class="d-flex flex-wrap justify-content-center py-3 mb-3 border-bottom primary-background">
         <router-link to="/dashboard" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
             <object class="bi me-2 ms-4" width="40" height="40" data="/icon.svg" alt="Logo" />
             <span class="fs-4 title">Uptime Kuma</span>
@@ -91,11 +91,20 @@ export default {
     },
     mounted() {
         this.init();
+        // globally apply the theme
+        this.loadThemeOnStart();
     },
     methods: {
         init() {
             if (this.$route.name === "root") {
                 this.$router.push("/dashboard")
+            }
+        },
+        loadThemeOnStart() {
+            const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+            if (currentTheme) {
+                document.documentElement.setAttribute('data-theme', currentTheme);
             }
         },
 
@@ -113,7 +122,7 @@ export default {
     height: 60px;
     width: 100%;
     left: 0;
-    background-color: var(--background-color);
+    background-color: var(--primary-background-color);
     box-shadow: 0 15px 47px 0 rgba(0, 0, 0, 0.05), 0 5px 14px 0 rgba(0, 0, 0, 0.05);
     text-align: center;
     white-space: nowrap;
@@ -149,10 +158,23 @@ export default {
     margin-right: 25px;
 }
 
+.nav-link {
+    background-color: var(--btn-primary);
+    color: var(--btn-text)
+}
+
+.nav-link.active{
+    background-color: var(--btn-active);
+}
+
 .lost-connection {
     padding: 5px;
     background-color: var(--connection-lost);
     color: var(--connection-lost-text);
+}
+
+.primary-background {
+    background-color: var(--primary-background-color);
 }
 
 footer {

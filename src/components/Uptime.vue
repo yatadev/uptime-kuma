@@ -27,18 +27,18 @@ export default {
 
         color() {
             if (this.lastHeartBeat.status === 0) {
-                return "danger"
+                return "isDown"
             }
 
             if (this.lastHeartBeat.status === 1) {
-                return "primary"
+                return "isUp"
             }
 
             if (this.lastHeartBeat.status === 2) {
-                return "warning"
+                return "isWarning"
             }
 
-            return "secondary"
+            return "isSecondary"
         },
 
         lastHeartBeat() {
@@ -53,7 +53,7 @@ export default {
 
         className() {
             if (this.pill) {
-                return `badge rounded-pill bg-${this.color}`;
+                return `badge rounded-pill ${this.color}`;
             }
 
             return "";

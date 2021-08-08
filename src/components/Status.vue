@@ -1,28 +1,32 @@
 <template>
-    <span class="badge rounded-pill" :class=" 'bg-' + color ">{{ text }}</span>
+    <span :class="className">{{ text }}</span>
 </template>
 
 <script>
 export default {
     props: {
         status: Number,
+        pill: {
+            type: Boolean,
+            default: false,
+        },
     },
 
     computed: {
         color() {
             if (this.status === 0) {
-                return "danger"
+                return "isDown"
             }
 
             if (this.status === 1) {
-                return "primary"
+                return "isUp"
             }
 
             if (this.status === 2) {
-                return "warning"
+                return "isWarning"
             }
 
-            return "secondary"
+            return "isSecondary"
         },
 
         text() {
@@ -39,6 +43,10 @@ export default {
             }
 
             return "Unknown"
+        },
+
+        className() {
+            return `badge rounded-pill ${this.color}`;
         },
     },
 }
